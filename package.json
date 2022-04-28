@@ -1,0 +1,11 @@
+{
+  "name": "fun",
+  "devDependencies": {
+    "@babel/cli": "^7.17.3",
+    "@babel/core": "^7.17.5",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "jest": "^27.5.1"
+  },
+  "packageManager": "yarn@3.2.0"
+}
