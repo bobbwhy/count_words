@@ -2,15 +2,15 @@
 ## Split, Sort, Count
 
 * multiple: 1, elapsed: 15
-* multiple: 100000, elapsed: 5578
-* multiple: 200000, elapsed: 11429
-* multiple: 300000, elapsed: 24641,
-* multiple: 400000, elapsed: 28197,
+* multiple: 100000, elapsed: 5754
+* multiple: 200000, elapsed: 11914
+* multiple: 300000, elapsed: 25130
+* multiple: 400000, elapsed: 28766
 
 
 ## Split, Count
-* multiple: 1, elapsed: 13
-* multiple: 100000, elapsed: 2177
-* multiple: 200000, elapsed: 4398
-* multiple: 300000, elapsed: 8008
-* multiple: 400000, elapsed: 9947
+* multiple: 1, elapsed: 15
+* multiple: 100000, elapsed: 2226
+* multiple: 200000, elapsed: 4435
+* multiple: 300000, elapsed: 8084
+* multiple: 400000, elapsed: 9900
