@@ -3,6 +3,11 @@
 import * as fs from 'fs';
 
 
+import { cleanText } from "./clean-text.method";
+
+import { openText } from './open.method';
+import { sortWordCounts } from "./sort-word-counts.method";
+import {multiplyText} from "./make-a-lotta-text.method";
 
 const parseText = (text) => {
   text = cleanText(text);
@@ -13,22 +18,6 @@ const parseText = (text) => {
 
   const sortedCounts = sortWordCounts(wordCounts);
   console.log(sortedCounts);
-}
-
-const cleanText = text =>
-  text.toLowerCase().replace(/[^a-z-\s]/g, '');
-
-
-const sortWordCounts = (wordCounts) => {
-  const wordCountsList = [];
-  const keys = Object.keys(wordCounts);
-  keys.forEach( key => {
-    wordCountsList.push({key, count: wordCounts[key]})
-  });
-  console.log(wordCountsList);
-  wordCountsList.sort((a, b) => a.count > b.count ? -1 : 1);
-  console.log(wordCountsList)
-  return wordCountsList;
 }
 
 const countTimesForWord = (words) => {
@@ -66,13 +55,20 @@ const countTimesForWord = (words) => {
 }
 
 
-const run = () => {
-  const fn = process.argv.splice(-1)[0];
-  const fileContents = String(fs.readFileSync(`./src/${fn}`));
-  parseText(fileContents)
+const timeLogs = [];
+
+const runByMultiple = (text, multiple) => {
+  text = multiplyText(text, multiple);
+  const startTime = new Date();
+  parseText(text);
+  const endTime = new Date();
+  const elapsed = endTime - startTime;
+  timeLogs.push({multiple, elapsed});
 }
 
-
-run();
-
-
+const multiples = [
+  1, 100000, 200000, 300000, 400000
+];
+const text = openText();
+multiples.forEach(multiple => runByMultiple(text, multiple));
+console.log( timeLogs );

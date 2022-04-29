@@ -1,8 +1,9 @@
 {
   "name": "fun",
   "scripts": {
-    "count": "babel-node ./src/start.script.js decl-main.txt",
-    "count:less": "babel-node ./src/start.script.js short.txt"
+    "count": "babel-node src/split_sort_count.script.js decl-main.txt",
+    "count:split_count": "babel-node ./src/split_count.js decl-main.txt",
+    "count:less": "babel-node src/split_sort_count.script.js short.txt"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.3",
