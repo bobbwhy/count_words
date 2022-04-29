@@ -1,5 +1,9 @@
 {
   "name": "fun",
+  "scripts": {
+    "count": "babel-node ./src/start.script.js decl-main.txt",
+    "count:less": "babel-node ./src/start.script.js short.txt"
+  },
   "devDependencies": {
     "@babel/cli": "^7.17.3",
     "@babel/core": "^7.17.5",
